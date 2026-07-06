@@ -4,12 +4,11 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section style={{
+    <section className="px-4 sm:px-8 md:px-20" style={{
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      padding: '0 5rem',
       position: 'relative',
       overflow: 'hidden',
     }}>

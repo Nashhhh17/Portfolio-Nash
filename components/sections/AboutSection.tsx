@@ -6,15 +6,10 @@ import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function AboutSection() {
   return (
-    <section style={{ padding: '0 5rem 8rem' }}>
+    <section className="px-4 sm:px-8 md:px-20 pb-16 md:pb-32">
       <div className="section-divider" style={{ marginBottom: '8rem' }} />
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '8rem',
-        alignItems: 'center',
-      }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 items-center">
         {/* Foto kiri */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -74,12 +69,7 @@ export default function AboutSection() {
           </div>
 
           {/* Info grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '1rem',
-            marginTop: '3rem',
-          }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12">
             {[
               { label: 'Name', value: 'Nashrulloh Qorib' },
               { label: 'Role', value: 'Web Developer' },

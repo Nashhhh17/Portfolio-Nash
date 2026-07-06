@@ -6,7 +6,7 @@ import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function ProjectsSection() {
   return (
-    <section style={{ padding: '8rem 5rem' }}>
+    <section className="px-4 sm:px-8 md:px-20 py-16 md:py-32">
       <div className="section-divider" style={{ marginBottom: '8rem' }} />
 
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '4rem' }}>
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
       {projects.length === 0 ? (
         <p style={{ fontFamily: 'monospace', fontSize: '0.875rem', color: '#444444' }}>// no projects yet</p>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

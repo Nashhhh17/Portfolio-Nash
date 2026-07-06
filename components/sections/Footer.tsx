@@ -11,7 +11,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer style={{ padding: '8rem 5rem', borderTop: '1px solid rgba(61,214,140,0.1)' }}>
+    <footer className="px-4 sm:px-8 md:px-20 py-16 md:py-32" style={{ borderTop: '1px solid rgba(61,214,140,0.1)' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
 
         <motion.p
@@ -23,7 +23,7 @@ export default function Footer() {
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} viewport={{ once: true }}
-          style={{ fontSize: '3.5rem', fontWeight: 800, color: '#efefef', marginBottom: '1.25rem', letterSpacing: '-0.02em' }}
+          style={{ fontSize: 'clamp(2rem, 7vw, 3.5rem)', fontWeight: 800, color: '#efefef', marginBottom: '1.25rem', letterSpacing: '-0.02em' }}
         >
           Let's Connect!
         </motion.h2>

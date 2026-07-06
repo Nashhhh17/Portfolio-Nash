@@ -48,7 +48,7 @@ export default function ProjectHero({ project }: { project: Project }) {
         </h1>
 
         {/* Role / Year / Stack table */}
-        <div className="mb-8 grid max-w-2xl grid-cols-[auto_auto_1fr] gap-x-10 gap-y-2">
+        <div className="mb-8 grid max-w-2xl grid-cols-1 sm:grid-cols-[auto_auto_1fr] gap-x-10 gap-y-2">
           {project.role && (
             <span className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-[#3dd68c]">
               Role

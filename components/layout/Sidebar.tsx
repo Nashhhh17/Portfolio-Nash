@@ -27,7 +27,7 @@ export default function Sidebar({ open, onClose }: { open: boolean; onClose: () 
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             style={{
               position: 'fixed', top: 0, right: 0, zIndex: 50,
-              height: '100%', width: '280px',
+              height: '100%', width: 'min(280px, 85vw)',
               backgroundColor: '#0e0e0e',
               borderLeft: '1px solid rgba(61,214,140,0.15)',
               padding: '2rem',
@@ -54,16 +54,15 @@ export default function Sidebar({ open, onClose }: { open: boolean; onClose: () 
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08 }}
                 >
-                  <Link href={link.href} onClick={onClose} style={{
-                    display: 'block',
-                    fontSize: '2rem', fontWeight: 800,
+                  <Link href={link.href} onClick={onClose} 
+                  className="block text-2xl sm:text-3xl font-extrabold hover:text-text-primary"
+                  style={{
                     color: '#333333', textDecoration: 'none',
                     letterSpacing: '-0.02em',
                     padding: '0.5rem 0',
                     transition: 'color 0.3s',
                     borderBottom: '1px solid rgba(255,255,255,0.04)',
                   }}
-                  className="hover:text-text-primary"
                   >
                     {link.label}
                   </Link>

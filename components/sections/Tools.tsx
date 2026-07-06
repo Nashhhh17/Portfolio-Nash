@@ -45,11 +45,7 @@ function IconGrid({ items }: { items: IconItem[] }) {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(6, 1fr)',
-      gap: '1.25rem',
-    }}>
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-5">
       {items.map(({ icon: Icon, name }) => (
         <motion.div
           key={name}
@@ -168,7 +164,7 @@ function IconGrid({ items }: { items: IconItem[] }) {
 
 export default function Tools() {
   return (
-    <section style={{ padding: '0 5rem 8rem' }}>
+    <section className="px-4 sm:px-8 md:px-20 pb-16 md:pb-32">
       <div className="section-divider" style={{ marginBottom: '8rem' }} />
 
       {/* Technologies */}
@@ -177,7 +173,7 @@ export default function Tools() {
           <p style={{ fontFamily: 'monospace', fontSize: '0.75rem', color: '#3dd68c', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
             Languages & Frameworks
           </p>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 800, color: '#efefef', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3.5rem)', fontWeight: 800, color: '#efefef', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
             TECHNOLOGIES
           </h2>
         </div>
@@ -190,7 +186,7 @@ export default function Tools() {
           <p style={{ fontFamily: 'monospace', fontSize: '0.75rem', color: '#3dd68c', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
             Software & Platforms
           </p>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 800, color: '#efefef', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3.5rem)', fontWeight: 800, color: '#efefef', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
             TOOLS
           </h2>
         </div>

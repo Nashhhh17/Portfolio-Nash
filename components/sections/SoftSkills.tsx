@@ -11,15 +11,10 @@ const softSkills = [
 
 export default function SoftSkills() {
   return (
-    <section style={{ padding: '0 5rem 8rem' }}>
+    <section className="px-4 sm:px-8 md:px-20 pb-16 md:pb-32">
       <div className="section-divider" style={{ marginBottom: '8rem' }} />
       <SectionTitle label="" title="SOFT SKILLS" />
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: '1rem',
-        marginTop: '3rem',
-      }}>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-12">
         {softSkills.map((skill, i) => (
           <motion.div
             key={skill}

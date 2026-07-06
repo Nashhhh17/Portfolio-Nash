@@ -6,7 +6,7 @@ import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function ExperiencesSection() {
   return (
-    <section style={{ padding: '0 5rem 8rem' }}>
+    <section className="px-4 sm:px-8 md:px-20 py-16 md:py-32">
       <div className="section-divider" style={{ marginBottom: '8rem' }} />
 
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '4rem' }}>
@@ -30,7 +30,7 @@ export default function ExperiencesSection() {
       {experiences.length === 0 ? (
         <p style={{ fontFamily: 'monospace', fontSize: '0.875rem', color: '#444444' }}>// no experiences yet</p>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {experiences.map((experience) => (
             <ExperienceCard key={experience.id} experience={experience} />
           ))}
