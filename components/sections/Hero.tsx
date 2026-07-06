@@ -11,6 +11,7 @@ export default function Hero() {
       justifyContent: 'center',
       position: 'relative',
       overflow: 'hidden',
+      wordBreak: 'break-word',
     }}>
       {/* Background grid */}
       <div style={{
@@ -58,7 +59,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           style={{
-            fontSize: 'clamp(4rem, 10vw, 9rem)',
+            fontSize: 'clamp(2.5rem, 9vw, 9rem)',
             fontWeight: 800,
             color: '#efefef',
             lineHeight: 0.95,
